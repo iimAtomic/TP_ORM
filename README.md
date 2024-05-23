@@ -107,7 +107,7 @@ classDiagram
 
 ```mermaid
 erDiagram
-    DEPÊCHE {
+    DEPECHE {
         int id_depeche PK
         string titre
         string contenu
@@ -155,7 +155,7 @@ erDiagram
         int id_ia FK
     }
 
-    DEPÊCHE ||--o{ ARTICLE : "génère"
+    DEPECHE ||--o{ ARTICLE : "génère"
     ARTICLE ||--o{ ARTICLE_ILLUSTRATION : "a"
     ARTICLE ||--o{ ARTICLE_TAG : "a"
     ILLUSTRATION ||--o{ ARTICLE_ILLUSTRATION : "appartient"
@@ -164,6 +164,7 @@ erDiagram
     ILLUSTRATION ||--o{ ILLUSTRATION_IAGENERATIVE : "utilise"
     IAGENERATIVE ||--o{ ARTICLE_IAGENERATIVE : "est utilisé par"
     IAGENERATIVE ||--o{ ILLUSTRATION_IAGENERATIVE : "est utilisé par"
+
 
 ```
 
