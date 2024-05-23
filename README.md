@@ -102,12 +102,70 @@ classDiagram
 
 ```
 
-![uml](https://github.com/iimAtomic/TP_ORM/assets/71674056/2e0ef516-12e2-46ee-b5db-bec4e884b65c)
-
 
 3- Créer le diagramme MCD 
 
-![mcd_orm](https://github.com/iimAtomic/TP_ORM/assets/71674056/83cd40db-94c0-47d9-9763-b708114549b5)
+```mermaid
+erDiagram
+    DEPÊCHE {
+        int id_depeche PK
+        string titre
+        string contenu
+        date date_publication
+        string source
+    }
+    ARTICLE {
+        int id_article PK
+        string titre
+        string contenu
+        date date_creation
+        string url
+        string statut
+        string auteur
+    }
+    ILLUSTRATION {
+        int id_illustration PK
+        string url
+        string description
+        date date_creation
+    }
+    TAG {
+        int id_tag PK
+        string nom
+    }
+    IAGENERATIVE {
+        int id_ia PK
+        string type
+        string fonction
+    }
+    ARTICLE_ILLUSTRATION {
+        int id_article FK
+        int id_illustration FK
+    }
+    ARTICLE_TAG {
+        int id_article FK
+        int id_tag FK
+    }
+    ARTICLE_IAGENERATIVE {
+        int id_article FK
+        int id_ia FK
+    }
+    ILLUSTRATION_IAGENERATIVE {
+        int id_illustration FK
+        int id_ia FK
+    }
+
+    DEPÊCHE ||--o{ ARTICLE : "génère"
+    ARTICLE ||--o{ ARTICLE_ILLUSTRATION : "a"
+    ARTICLE ||--o{ ARTICLE_TAG : "a"
+    ILLUSTRATION ||--o{ ARTICLE_ILLUSTRATION : "appartient"
+    TAG ||--o{ ARTICLE_TAG : "a"
+    ARTICLE ||--o{ ARTICLE_IAGENERATIVE : "utilise"
+    ILLUSTRATION ||--o{ ILLUSTRATION_IAGENERATIVE : "utilise"
+    IAGENERATIVE ||--o{ ARTICLE_IAGENERATIVE : "est utilisé par"
+    IAGENERATIVE ||--o{ ILLUSTRATION_IAGENERATIVE : "est utilisé par"
+
+```
 
 
 4- Créer le schéma relationnel des tables grâce à un ORM dans le langage de
