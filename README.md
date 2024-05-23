@@ -174,7 +174,7 @@ votre choix
 
 J'ai utilisé le framework symfony avec l'ORM DOCTRINE  ,le code se trouve ci dessus. 
 
-![doctrine_mcd](https://github.com/iimAtomic/TP_ORM/assets/71674056/5d847fc6-3d8b-4bd4-884c-4e252edefc28)
+
 
  
  
