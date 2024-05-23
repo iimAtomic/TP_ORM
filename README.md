@@ -44,6 +44,64 @@
 
 2- Créer le diagramme de classe UML
 
+```mermaid
+classDiagram
+    class Depêche {
+        +int id_depeche
+        +string titre
+        +string contenu
+        +date date_publication
+        +string source
+    }
+
+    class Article {
+        +int id_article
+        +string titre
+        +string contenu
+        +date date_creation
+        +string url
+        +string statut
+        +string auteur
+    }
+
+    class Illustration {
+        +int id_illustration
+        +string url
+        +string description
+        +date date_creation
+    }
+
+    class Tag {
+        +int id_tag
+        +string nom
+    }
+
+    class IAGenerative {
+        <<abstract>>
+        +int id_ia
+        +string type
+        +string fonction
+        +creer()
+    }
+
+    class IAGenerativeTexte {
+        +creer()
+    }
+
+    class IAGenerativeImage {
+        +creer()
+    }
+
+    Depêche "1" --> "0..*" Article : génère
+    Article "1" --> "0..*" Illustration : a
+    Article "1" --> "0..*" Tag : a
+    Article "1" --> "0..*" IAGenerativeTexte : utilise
+    Illustration "1" --> "0..*" IAGenerativeImage : utilise
+    IAGenerative <|-- IAGenerativeTexte
+    IAGenerative <|-- IAGenerativeImage
+
+```
+
 ![uml](https://github.com/iimAtomic/TP_ORM/assets/71674056/2e0ef516-12e2-46ee-b5db-bec4e884b65c)
 
 
