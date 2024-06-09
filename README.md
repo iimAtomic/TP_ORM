@@ -353,3 +353,24 @@ sequenceDiagram
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+# Tableau Synoptique sur le Thème "ChatGPT"
+
+| **Idée**                                 | **Document 1 (Guide de l'enseignant)**                                                                                 | **Document 2 (Formation ChatGPT)**                                                                            | **Document 3 (Comprendre le phénomène ChatGPT)**                                                                 | **Document 4 (100 exemples de mise en pratique avec ChatGPT)**                                                   | **Document 5 (ChatGPT)**                                                                                         |
+|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| **Aide à la création de contenu**        | Utilisation de ChatGPT pour générer des quiz et des évaluations pour les élèves.                                       | Utilisation de ChatGPT pour générer des idées de contenu.                                                     | Utilisation de ChatGPT pour générer des articles de blog et des posts sur les réseaux sociaux.                  | ChatGPT peut aider à créer des contenus, mais il faut éviter de les utiliser tels quels en raison d'éventuelles erreurs. | Utilisation de ChatGPT pour générer des réponses automatiques et du contenu marketing.                           |
+| **Éducation et formation**               | Génération de plans de cours adaptés aux besoins des élèves.                                                          | Utilisation de ChatGPT pour fournir des exemples de qualité pour les devoirs et les tâches d'apprentissage.   | Utilisation de ChatGPT pour générer des plans de cours et des supports pédagogiques.                            | Utilisation de ChatGPT pour trouver des sujets d'articles, d'exposés et de conférences.                           | Utilisation de ChatGPT pour créer des supports éducatifs interactifs.                                             |
+| **Amélioration des compétences**         | Utilisation de ChatGPT pour générer des tâches différenciées selon les capacités des élèves.                           | ChatGPT aide à l'évaluation formative en générant des quiz et des évaluations.                                 | Utilisation de ChatGPT pour améliorer les compétences rédactionnelles des élèves.                                | Utilisation de ChatGPT pour générer rapidement du contenu en cas d'urgence.                                       | Utilisation de ChatGPT pour fournir des commentaires et des conseils personnalisés.                              |
+| **Applications pratiques diverses**      | Utilisation de ChatGPT pour générer des supports visuels comme des affiches et des infographies.                       | Utilisation de ChatGPT pour générer des scripts, des poèmes et des histoires.                                 | Utilisation de ChatGPT pour générer des questions d'interview et des scripts.                                    | ChatGPT peut proposer des plans pour des articles ou des exposés.                                                 | Utilisation de ChatGPT pour générer des idées de projets et des présentations.                                   |
+| **Défis et limitations**                 | ChatGPT doit être utilisé avec précaution pour éviter des contenus de qualité médiocre.                                | ChatGPT peut générer des contenus répétitifs et impersonnels.                                                  | ChatGPT peut introduire des erreurs dans les contenus générés.                                                   | Nécessité de réécrire les contenus générés pour les personnaliser et les rendre plus engageants.                  | Importance de vérifier et de personnaliser les contenus générés par ChatGPT pour éviter les erreurs et les imprécisions. |
+
+
