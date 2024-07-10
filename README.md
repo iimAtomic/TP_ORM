@@ -353,6 +353,80 @@ sequenceDiagram
 ```
 
 
+##yoyo
+
+```mermaid
+classDiagram
+    class Photo {
+        +int ID_Photo
+        +int ID_Plante
+        +String CheminPhoto
+        +Date DatePhoto
+    }
+
+    class Client {
+        +int ID_Client
+        +String Adresse
+    }
+
+    class Plante {
+        +int ID_Plante
+        +int ID_Gardien
+        +int ID_Client
+        +String NomPlante
+        +String TypePlante
+    }
+
+    class Garde {
+        +int ID_Garde
+        +int ID_Gardien
+        +int ID_Proprietaire
+        +int ID_Plante
+        +Date DateDebut
+        +Date DateFin
+        +String Note_Commentaire
+    }
+
+    class Gardien {
+        +int ID_Gardien
+        +String Adresse
+    }
+
+    class Conseil {
+        +int ID_Conseil
+        +int ID_Plante
+        +int ID_Botaniste
+        +String TexteConseil
+    }
+
+    class Utilisateur {
+        +int ID_Utilisateur
+        +int ID_Client
+        +int ID_Gardien
+        +int ID_Botaniste
+        +String Nom_Prenom
+        +String Numéro
+        +String Email
+        +String MotDePasse
+    }
+
+    class Botaniste {
+        +int ID_Botaniste
+    }
+
+    Photo --> Plante : Possède
+    Client --> Plante : Possède
+    Plante --> Gardien : Gardée
+    Plante --> Conseil : Conseillée
+    Garde --> Gardien : Garde
+    Garde --> Plante : Gardée
+    Conseil --> Botaniste : Donne
+    Utilisateur --> Client : est
+    Utilisateur --> Gardien : est
+    Utilisateur --> Botaniste : est
+```
+
+
 
 
 
