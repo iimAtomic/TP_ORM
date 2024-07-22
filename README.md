@@ -434,48 +434,69 @@ classDiagram
 
  ```mermaid
 
-usecaseDiagram
-    actor Étudiant as User
-    actor Mentor
-    actor Admin
+    classDiagram
+    class User {
+        +int id
+        +string nom
+        +string prenom
+        +string ville
+        +string tel
+        +date dateNaissance
+        +string email
+        +string role
+        +Abonnement abonnement
+        +Mentor mentorAssigné
+        +modifierInfosPersonnelles()
+    }
+    
+    class Abonnement {
+        +int id
+        +string type
+        +date dateDebut
+        +date dateFin
+        +User user
+        +Mentor mentor
+    }
 
-    User --> (S'inscrire)
-    User --> (Choisir un pack)
-    User --> (Accéder au dashboard)
-    User --> (Échanger avec mentor)
-    User --> (Consulter informations CAF, impôts, etc.)
-    User --> (Modifier informations personnelles)
+    class Mentor {
+        +int id
+        +string nom
+        +string prenom
+        +string email
+        +string telephone
+        +string specialisation
+        +List~User~ usersAssignés
+    }
 
-    Mentor --> (Répondre aux messages)
-    Mentor --> (Consulter les étudiants assignés)
+    class Message {
+        +int id
+        +string contenu
+        +datetime dateEnvoi
+        +User expediteur
+        +User destinataire
+    }
 
-    Admin --> (Gérer les utilisateurs)
-    Admin --> (Assigner un mentor)
-    Admin --> (Recevoir les notifications de souscription)
-    Admin --> (Envoyer les emails fin de période)
-    Admin --> (Gérer les abonnements)
-    Admin --> (Créer utilisateur)
-    Admin --> (Créer mentor)
-    Admin --> (Créer admin)
-    Admin --> (Voir les messages)
+    User "1" -- "1" Abonnement
+    User "1" -- "1" Mentor : Assigné
+    User "0..*" -- "0..*" Message : envoi
+    Mentor "1" -- "0..*" User : Assigne
+    Abonnement "1" -- "1" Mentor
+    User <|-- Admin
+    User <|-- Mentor
+    User <|-- Utilisateur
 
-    (S'inscrire) --> (Page d'inscription)
-    (Choisir un pack) --> (Page des packs)
-    (Accéder au dashboard) --> (Dashboard)
-    (Échanger avec mentor) --> (Messagerie)
-    (Consulter informations CAF, impôts, etc.) --> (Espace Informations)
-    (Modifier informations personnelles) --> (Page de profil)
-    (Répondre aux messages) --> (Messagerie)
-    (Consulter les étudiants assignés) --> (Liste des étudiants)
-    (Gérer les utilisateurs) --> (Page admin)
-    (Assigner un mentor) --> (Page d'assignation)
-    (Recevoir les notifications de souscription) --> (Notifications)
-    (Envoyer les emails fin de période) --> (Emails)
-    (Gérer les abonnements) --> (Page des abonnements)
-    (Créer utilisateur) --> (Formulaire de création)
-    (Créer mentor) --> (Formulaire de création)
-    (Créer admin) --> (Formulaire de création)
-    (Voir les messages) --> (Page des messages)
+    class Admin {
+        +creerUtilisateur()
+        +creerMentor()
+        +creerAdmin()
+        +voirMessages()
+    }
+
+    class Utilisateur {
+        +souscrireAbonnement()
+        +envoyerMessage()
+        +modifierInfosPersonnelles()
+    }
 
 
 ```
