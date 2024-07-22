@@ -430,12 +430,52 @@ classDiagram
 
 
 
+ ##yaya
+
+ ```mermaid
+
+usecaseDiagram
+    actor Étudiant as User
+    actor Mentor
+    actor Admin
+
+    User --> (S'inscrire)
+    User --> (Choisir un pack)
+    User --> (Accéder au dashboard)
+    User --> (Échanger avec mentor)
+    User --> (Consulter informations CAF, impôts, etc.)
+    User --> (Modifier informations personnelles)
+
+    Mentor --> (Répondre aux messages)
+    Mentor --> (Consulter les étudiants assignés)
+
+    Admin --> (Gérer les utilisateurs)
+    Admin --> (Assigner un mentor)
+    Admin --> (Recevoir les notifications de souscription)
+    Admin --> (Envoyer les emails fin de période)
+    Admin --> (Gérer les abonnements)
+    Admin --> (Créer utilisateur)
+    Admin --> (Créer mentor)
+    Admin --> (Créer admin)
+    Admin --> (Voir les messages)
+
+    (S'inscrire) --> (Page d'inscription)
+    (Choisir un pack) --> (Page des packs)
+    (Accéder au dashboard) --> (Dashboard)
+    (Échanger avec mentor) --> (Messagerie)
+    (Consulter informations CAF, impôts, etc.) --> (Espace Informations)
+    (Modifier informations personnelles) --> (Page de profil)
+    (Répondre aux messages) --> (Messagerie)
+    (Consulter les étudiants assignés) --> (Liste des étudiants)
+    (Gérer les utilisateurs) --> (Page admin)
+    (Assigner un mentor) --> (Page d'assignation)
+    (Recevoir les notifications de souscription) --> (Notifications)
+    (Envoyer les emails fin de période) --> (Emails)
+    (Gérer les abonnements) --> (Page des abonnements)
+    (Créer utilisateur) --> (Formulaire de création)
+    (Créer mentor) --> (Formulaire de création)
+    (Créer admin) --> (Formulaire de création)
+    (Voir les messages) --> (Page des messages)
 
 
-
-
-
-
-
-
-
+```
