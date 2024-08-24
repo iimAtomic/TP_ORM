@@ -500,41 +500,13 @@ classDiagram
 ```
 
 
-usecaseDiagram
-    actor Student
-    actor Mentor
-    actor Admin
-
-    Student --> (S'inscrire)
-    Student --> (Choisir un pack)
-    Student --> (Faire un paiement)
-    Student --> (Envoyer des messages)
-    Student --> (Consulter les cartes d'information)
-    Student --> (Consulter les informations sur le mentor)
-    Student --> (Rejoindre la communauté WhatsApp)
-    
-    Admin --> (Gérer les utilisateurs)
-    Admin --> (Assigner un mentor)
-    Admin --> (Gérer les packs)
-    Admin --> (Gérer les paiements)
-    Admin --> (Gérer les messages)
-    
-    Mentor --> (Recevoir des messages)
-    Mentor --> (Donner du support)
-
-
-
-
-
-
-
-
 
 
 ##Educ
 
-```mermaide
 
+
+```mermaid
 classDiagram
     class User {
         +int id
@@ -613,6 +585,4 @@ classDiagram
     User "1" -- "0..*" Payment : makes
     Pack "1" -- "0..*" Payment : related_to
 
-
 ```
-
