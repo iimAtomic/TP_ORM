@@ -428,8 +428,6 @@ classDiagram
 
 
 
-
-
  ##yaya
 
  ```mermaid
@@ -500,3 +498,121 @@ classDiagram
 
 
 ```
+
+
+usecaseDiagram
+    actor Student
+    actor Mentor
+    actor Admin
+
+    Student --> (S'inscrire)
+    Student --> (Choisir un pack)
+    Student --> (Faire un paiement)
+    Student --> (Envoyer des messages)
+    Student --> (Consulter les cartes d'information)
+    Student --> (Consulter les informations sur le mentor)
+    Student --> (Rejoindre la communauté WhatsApp)
+    
+    Admin --> (Gérer les utilisateurs)
+    Admin --> (Assigner un mentor)
+    Admin --> (Gérer les packs)
+    Admin --> (Gérer les paiements)
+    Admin --> (Gérer les messages)
+    
+    Mentor --> (Recevoir des messages)
+    Mentor --> (Donner du support)
+
+
+
+
+
+
+
+
+
+
+##Educ
+
+```mermaide
+
+classDiagram
+    class User {
+        +int id
+        +string username
+        +string email
+        +string password_hash
+        +string role
+        +datetime created_at
+        +datetime updated_at
+    }
+
+    class Mentor {
+        +int id
+        +int user_id
+        +string specialization
+        +string languages
+        +text bio
+        +datetime created_at
+        +datetime updated_at
+    }
+
+    class Pack {
+        +int id
+        +string name
+        +text description
+        +decimal price
+        +int duration_days
+        +datetime created_at
+        +datetime updated_at
+    }
+
+    class StudentPackSubscription {
+        +int id
+        +int student_id
+        +int pack_id
+        +int mentor_id
+        +datetime start_date
+        +datetime end_date
+        +datetime created_at
+        +datetime updated_at
+    }
+
+    class Message {
+        +int id
+        +int sender_id
+        +int receiver_id
+        +text content
+        +datetime sent_at
+    }
+
+    class Payment {
+        +int id
+        +int student_id
+        +int pack_id
+        +decimal amount
+        +string payment_method
+        +string transaction_id
+        +datetime paid_at
+    }
+
+    class ContentCard {
+        +int id
+        +string title
+        +text content
+        +string category
+        +datetime created_at
+        +datetime updated_at
+    }
+
+    User "1" -- "0..1" Mentor : has
+    User "1" -- "0..*" StudentPackSubscription : subscribes
+    Pack "1" -- "0..*" StudentPackSubscription : includes
+    Mentor "1" -- "0..*" StudentPackSubscription : assigned_to
+    User "1" -- "0..*" Message : sends
+    User "1" -- "0..*" Message : receives
+    User "1" -- "0..*" Payment : makes
+    Pack "1" -- "0..*" Payment : related_to
+
+
+```
+
